@@ -14,16 +14,14 @@
   - [Working Group Technical Project Manager](#working-group-technical-project-manager-tpm)
 - [Active Teams](#active-teams)
   - [Working Groups](#working-groups)
-    - [Project](#project)
-    - [Content Routing](#content-routing)
-    - [Testground](#testground)
     - [Bifrost](#bifrost)
     - [Ecosystem](#ecosystem)
+    - [Core Implementations](#core-implementations)
+    - [Web Browsers + GUI](#web-browsers-gui)
+    
   - [Special Interest Groups](#special-interest-groups)
     - [Collabs & Community](#collabs--community)
     - [Developer Experience](#developer-experience)
-    - [Integration with Web Browsers](#integration-with-web-browsers)
-    - [IPFS GUI](#ipfs-guiux)
     - [Local Offline Collaboration](#local-offline-collaboration-locol)
   - [Tiger Teams](#tiger-teams)
 
@@ -34,6 +32,10 @@ The IPFS Project is developed by multiple teams from multiple organizations and 
 This document presents the the existing teams that emerged and that led to the many of the sucesses within the IPFS project, their structure(namely: Working Groups & Special Interest Groups) and a definition of roles existing in the IPFS org. At the end of this document, you will find pointers to Teams and Projects that have grown to become their own entities, namely: [IPLD](http://ipld.io), [libp2p](https://libp2p.io) and [Multiformats](https://multiformats.io/).
 
 ## Team Structures
+
+The main focus for the IPFS team will be supporting IPFS+FIL ecosystem adoption and growth, by ensuring we maintain our network infra performance, drive growth and adoption for our collaborators, launch regular network improvements, and enhance the tools and products we offer IPFS developers with Filecoin capabilities. As part of our shift in focus, we will also need to embed a number of members of the IPFS team directly with the Filecoin team to help them successfully launch the network on time, and in a way that is usable by the IPFS web3 ecosystem.
+
+<img src="https://photos.google.com/u/1/photo/AF1QipPJs_1nRUOUufzrrdf9P9-MxKb-9WOHt43a7mnd">
 
 ### One line definition
 
@@ -152,17 +154,14 @@ Responsibilities include:
 These are the active teams inside the IPFS Org. 
 
 **Working Groups**
-- [Project](#project)
-- [Content Routing](#content-routing)
-- [Testground](#testground)
 - [Bifrost](#bifrost)
 - [Ecosystem](#ecosystem)
+- [Core Implementations](#core-implementations)
+- [Web Browsers + GUI](#web-browsers-gui)
 
 **Special Interest Groups**
 - [Collabs & Community](#collabs--community)
 - [Developer Experience](#developer-experience)
-- [Integration with Web Browsers](#integration-with-web-browsers)
-- [IPFS GUI](#ipfs-guiux)
 - [Local Offline Collaboration](#local-offline-collaboration-locol)
 
 In addition to the roles in each Team formation, we have these project leads:
@@ -171,72 +170,70 @@ In addition to the roles in each Team formation, we have these project leads:
 - `IPFS Project Co-Lead` - **AVAILABLE**
 
 ## Working Groups
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vQ0IEMEJpCM6wawOPDRCCOTqDNSvlKf-3WQE6ZEYqCipDdiaep41htmGfXsLH0tJwRWYNRvzEAdA5EV/pub?w=737&amp;h=419">
-
-### Project
-
-- **Coordination**: https://github.com/ipfs/team-mgmt
-- **[Molly Mackinlay](https://github.com/momack2): Captain**
-
-The Project working group helps support team functioning, prioritization, and day-to-day operations.
-
-**Responsibilities include**:
-- Manage cross-coordination and problem-solving between working groups
-- Track progression of objectives and key results (OKRs) for the project
-- Organize team meet-ups and summits
-
-### Content Routing
-
-- **Coordination**: https://github.com/ipfs/go-libp2p
-- **[Steven Allen](https://github.com/stebalien): Captain**
-- **[Jake Heun](https://github.com/jacobheun): TPM**
-
-The Content Routing team focuses on making improvements to the core implementations (in IPFS and libp2p) such that all IPFS users can find and access content they care about in a distributed network of nodes.
-
-**Responsibilities include**:
-- Design and implement improvements to the go-libp2p DHT
-- Add new features to providers or connection management subsystems
-- Test and benchmark existing performance on finding and connecting to nodes with the desired content
-
-### Testground
-
-- **Coordination**: https://github.com/ipfs/testground
-- **[Raul Kripalani](https://github.com/raulk): Architect**
-- **[Rob Matarangas](https://github.com/robmat05): TPM**
-
-The IPFS Testground team builds testing tooling to validate scalability and reliability of the core IPFS implementations, with easy onboarding for core developers to use in CI and one-off testing.
-
-**Responsibilities include**:
-- Build large-scale testing infrastructure to simulate and benchmark IPFS
-- Create dashboards and CI hooks to make testing infra more useful/usable
-- Support core implementation developers in creating/running real world test scenarios
+<img src="https://photos.google.com/u/1/photo/AF1QipOGkGjvF86myCWRUUk6IDi4f8FGr0wX4aX53_sT">
 
 ### Bifrost
 
-- **Coordination**: TBD
-- **[Oli Evans](https://github.com/olizilla): Captain**
+- **Coordination**: George will continue to lead our ipfs-infra team with Tommy and Michael
+- **[George Masgras](//https://github.com/gmas): Captain**
 
 Improve performance and stability of gateways and pinning, and provide public observability of services.
 
-**Responsibilities include**:
-- Manage and maintain the IPFS HTTP Gateway
-- Manage and maintain the IPFS Bootstrapper nodes
-- Manage and maintain the IPFS pinning service, pinbot
-- Monitor services and hosts used by the IPFS dev teams
-- Provide wisdom to other users that want to host IPFS nodes
+**Focus**:
+- Ensure we maintain network quality and performance
+- Create metrics, tooling, and introspection to visualize performance improvements/regressions in IPFS
+**KPIs**: 
+- Gateway uptime and time to first response
+- #benchmarks tracked & automated alerts
+
 
 ### Ecosystem
 
-- **Coordination**: TBD
+- **Coordination**: Dietrich will continue leading our ecosystem team with Andrew, Jenn, and Johnny with additional support from David Choi and Andrew Woo
 - **[Dietrich Ayala](https://github.com/autonome): Captain, TPM**
 
 Ensure community health and growth through collaborations, developer experience and platform availability. This group is the parent group for the [**Integration with Web Browsers**](#integration-with-web-browsers), [**Developer Experience**](#developer-experience), and [**Collabs & Community**](#collabs--community) Special Interest Groups (SIGs).
 
-**Responsibilities include**:
-- Steward and improve community and contributor enablement/support
-- Manage collaborations (including [with web browsers](https://github.com/ipfs/in-web-browsers))
-- Maintain lower-priority systems/tools
+- **Focus**: 
+- Support and drive growth for our top IPFS collabs
+- Track collab happiness and needs
+- Instrument our onboarding funnel
+- Maintain IPFS comms and community support (meetups/events/docs)
 
+- **KPIs**:
+- Growth in # of IPFS powered applications
+- Total # of IPFS end users (of IPFS-powered applications/sites)
+- Onboarding funnel pass-through rate
+- IPFS visibility/comms
+
+### Core Implementations
+
+- **Coordination**: Jacob will take charge of a new core implementations team - with two sub-teams stewarding our core implementations: go-ipfs/libp2p (led by Adin with support from Petar) and js-ipfs/libp2p (led by Alex with support from Hugo and Vasco)
+- **[Jake Heun](https://github.com/jacobheun): TPM**
+
+- **Focus**: 
+- Ensure we have regular releases with targeted protocol improvements needed by our ecosystem collabs, and that we practice good OSS maintainership
+- Note: we’ll be running on low-power here for the next quarter, and won’t have bandwidth to take on large changes - so we’ll need to prioritize/filter strongly and look to how our work can unlock the community to make the progress
+
+- **KPIs**:
+- <48hr response rate for collab issues/PRs
+- Avg release cadence (6 weeks or less)
+- #regressions in production go-ipfs or js-ipfs performance on network benchmarks (find time, transfer speed, provide time, success rate, add time)
+
+
+### Web Browsers + GUI
+
+- **Coordination**: Lidel will take charge of the revived WB+GUI WG including Vasco, Irakli, Jessica, and Rafael
+- **[Marcin Rataj](https://github.com/lidel)
+
+- **Focus**: 
+- Grow our browser adoption via our Brave collab
+- Enhance the IPFS developer tools with support for Filecoin
+- Drive product/technical improvements in our IPFS developer onboarding funnel
+
+- **KPIs**:
+- # nodes in the IPFS network
+- Onboarding funnel pass-through rate
 
 ## Special Interest Groups
 
